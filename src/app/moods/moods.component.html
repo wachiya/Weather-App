@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row">
+<div>
+<a routerLink="/home" class="btn btn-primary btn-lg">Home</a> &nbsp; &nbsp;
+<a routerLink="/forecast/{{cityName}}" class="btn btn-primary btn-lg">Forecast</a> &nbsp; &nbsp;
+<a routerLink="/moods" class="btn btn-primary btn-lg">Moods</a> &nbsp; &nbsp;
+<a routerLink="/activities" class="btn btn-primary btn-lg">Activities</a> 
+  </div>
+  <hr>
+  <div class="panel panel-success">
+    <div class="panel-heading"> </div>
+  <div class="panel-body">
+      <p *ngIf="error" class="alert alert-danger"> {{error}} </p>
+    <form name="mood">
+      <div class="form-group">
+<label> Mood Type </label>
+          <div class="input-group">
+              <input type="text" [(ngModel)] = "mood.mood_type" class="form-control" name="mood_type"/>
+              <span class="input-group-btn">
+                  <button (click)="saveMood()" type="submit" class="btn btn-success"> Save </button>
+              </span>
+            </div><!-- /input-group -->
+      </div>
+        <ul class="list-group list-group-flush">
+
+              <div class="col-sm-16">
+                  <div > 
+                          
+                    <table class="table"> 
+                      <thead class="thead-light"> 
+                        <tr> 
+                          <th scope="col">No.:</th> 
+                          <th scope="col">Date</th> 
+                          <th scope="col">Time</th> 
+                          <th scope="col">Mood</th>
+                          <th scope="col">Action</th> 
+                        </tr> 
+                      </thead> 
+                      <tbody *ngFor = 'let mood of output'> 
+                        <tr> 
+                          <th scope="row"> {{mood.id}} </th> 
+                          <td> {{mood.date}} </td> 
+                          <td> {{mood.time}} </td> 
+                          <td> {{mood.mood_type}} <input [(ngModel)]="mood.mood_type" name="mood_type" value="{{mood.mood_type}}" *ngIf="mood.edit">
+
+                          </td> 
+                          <td>
+                              <button (click)="deleteOneMood(mood.id)" type="submit" class="btn btn-danger"> 
+                                Delete </button>
+                                &nbsp;
+                              <button (click)="toggleEdit(mood)" type="submit" class="btn btn-primary" *ngIf="!mood.edit"> 
+                                Edit </button>
+                              <button (click)="updateOneMood(mood)" type="submit" class="btn btn-primary" *ngIf="mood.edit"> 
+                                Update </button>
+                          </td> 
+                        </tr> 
+                      </tbody> 
+                    </table> 
+                  </div>
+              </div>
+            
+          </ul>
+    </form>
+  </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,27 @@
+body {
+  background-image: url("/assets/unsplash2.jpg");
+  height: 100%;
+  background-position: center;
+    background-size: cover;
+}
+.bg1 {
+  background-image: url("https://mdbootstrap.com/img/Photos/Others/img%20%2832%29.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg2 {
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/City/6-col/img%20%2847%29.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.bg3 {
+    background-image: url("unsplash2.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

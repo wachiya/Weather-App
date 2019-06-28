@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://localhost:4200/home -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Weather</title>
+  <!--<base href="/">--><base href=".">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://localhost:4200/favicon.ico">
+ <link rel="stylesheet" href="./Weather_files/bootstrap.min.css">
+  <script src="./Weather_files/wow.min.js.download"></script>
+  <script> new WOW().init(); </script>
+<style type="text/css">/* You can add global styles to this file, and also import other style files */
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUE4RSIsImZpbGUiOiJzcmMvc3R5bGVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cbiJdfQ== */</style><style>.navbar-nav[_ngcontent-xda-c0] {
+    min-height: 400px;
+    }
+    
+.navbar-brand[_ngcontent-xda-c0]   img[_ngcontent-xda-c0] {
+      max-height: 100%;
+    }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxpQkFBaUI7SUFDakI7O0FBRUo7TUFDTSxnQkFBZ0I7SUFDbEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXZiYXItbmF2IHtcclxuICAgIG1pbi1oZWlnaHQ6IDQwMHB4O1xyXG4gICAgfVxyXG4gICAgXHJcbi5uYXZiYXItYnJhbmQgaW1nIHtcclxuICAgICAgbWF4LWhlaWdodDogMTAwJTtcclxuICAgIH0iXX0= */</style><style>body[_ngcontent-xda-c1] {
+  background-image: url("/unsplash2.jpg");
+  height: 100%;
+  background-position: center;
+    background-size: cover;
+}
+.bg1[_ngcontent-xda-c1] {
+  background-image: url("https://mdbootstrap.com/img/Photos/Others/img%20%2832%29.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg2[_ngcontent-xda-c1] {
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/City/6-col/img%20%2847%29.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.bg3[_ngcontent-xda-c1] {
+    background-image: url("unsplash2.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx1Q0FBdUM7RUFDdkMsWUFBWTtFQUNaLDJCQUEyQjtJQUN6QixzQkFBc0I7QUFDMUI7QUFDQTtFQUNFLHFGQUFxRjtFQUNyRiwyQkFBMkI7RUFDM0IsNEJBQTRCO0VBQzVCLHNCQUFzQjtBQUN4QjtBQUVBO0lBQ0ksb0dBQW9HO0lBQ3BHLFlBQVk7SUFDWiwyQkFBMkI7SUFDM0IsNEJBQTRCO0lBQzVCLHNCQUFzQjtFQUN4QjtBQUNGO0lBQ0ksc0NBQXNDO0lBQ3RDLFlBQVk7SUFDWiwyQkFBMkI7SUFDM0IsNEJBQTRCO0lBQzVCLHNCQUFzQjtFQUN4QiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiL3Vuc3BsYXNoMi5qcGdcIik7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbn1cclxuLmJnMSB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiaHR0cHM6Ly9tZGJvb3RzdHJhcC5jb20vaW1nL1Bob3Rvcy9PdGhlcnMvaW1nJTIwJTI4MzIlMjkuanBnXCIpO1xyXG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbn1cclxuXHJcbi5iZzIge1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiaHR0cHM6Ly9tZGJvb3RzdHJhcC5jb20vaW1nL1Bob3Rvcy9Ib3Jpem9udGFsL0NpdHkvNi1jb2wvaW1nJTIwJTI4NDclMjkuanBnXCIpO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgfVxyXG4uYmczIHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcInVuc3BsYXNoMi5qcGdcIik7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICB9XHJcbiAgXHJcbiJdfQ== */</style></head>
+
+<body>
+  <app-root _nghost-xda-c0="" ng-version="7.2.15">
+<!-- saved from url=(0026)http://localhost:4200/home -->
+<html _ngcontent-xda-c0=""><head _ngcontent-xda-c0=""></head><body _ngcontent-xda-c0=""><div _ngcontent-xda-c0="" class="text-center text-primary" style="background: #ecf0f1;"><p _ngcontent-xda-c0=""><img _ngcontent-xda-c0="" alt="logo" src="./Weather_files/logo3.png" width="150"></p><h2 _ngcontent-xda-c0="">Weather Assistant</h2></div><router-outlet _ngcontent-xda-c0=""></router-outlet><app-home _nghost-xda-c1="">
+<!-- saved from url=(0026)http://localhost:4200/home -->
+<html _ngcontent-xda-c1=""><body _ngcontent-xda-c1=""><div _ngcontent-xda-c1="" class="btn-group btn-block"><a _ngcontent-xda-c1="" class="btn btn-primary btn-lg" routerlink="/home" ng-reflect-router-link="/home" href="http://localhost:4200/home">Home</a> &nbsp; &nbsp;
+<a _ngcontent-xda-c1="" class="btn btn-primary btn-lg" ng-reflect-router-link="/forecast/Eldoret" href="http://localhost:4200/forecast/Eldoret">Forecast</a></div><div _ngcontent-xda-c1="" class="container"><div _ngcontent-xda-c1="" class="info"><div _ngcontent-xda-c1="" class="col-12"><div _ngcontent-xda-c1="" class="bg-info"><h3 _ngcontent-xda-c1="" class="bg.dark text-center">Current Weather Condition</h3><!--bindings={}--><form _ngcontent-xda-c1="" class="form-inline my-2 my-lg-0 ng-untouched ng-pristine ng-valid" novalidate=""><input _ngcontent-xda-c1="" aria-label="Search" class="form-control mr-sm-2 ng-untouched ng-pristine ng-valid" name="city" placeholder="Search By City" type="text" ng-reflect-name="city" ng-reflect-model="Eldoret"><button _ngcontent-xda-c1="" class="btn btn-primary my-2 my-sm-0" type="submit">Search</button></form></div><hr _ngcontent-xda-c1=""><!--bindings={
+  "ng-reflect-ng-if": "[object Object]"
+}--><div _ngcontent-xda-c1="" class="container"><div _ngcontent-xda-c1="" class="row"><div _ngcontent-xda-c1="" class="jumbotron text-center" style="background-image: url(/assets/t.jpg)"><h1 _ngcontent-xda-c1=""> ELDORET</h1><span _ngcontent-xda-c1="" class="display-3">15 °C</span><span _ngcontent-xda-c1="" class="display-3"> | 15 °C</span></div><div _ngcontent-xda-c1="" class="float-left"><ul _ngcontent-xda-c1=""><div _ngcontent-xda-c1=""><li _ngcontent-xda-c1="" class="list-group-item">Country: KE <img _ngcontent-xda-c1="" alt="" src="./Weather_files/ke.png"></li></div><li _ngcontent-xda-c1="" class="list-group-item">Latitude: 0.52 </li><li _ngcontent-xda-c1="" class="list-group-item">Longitude: 35.27 </li><li _ngcontent-xda-c1="" class="list-group-item">Maximum: 15 °C</li><li _ngcontent-xda-c1="" class="list-group-item">Minimum: 15 °C</li></ul></div> &nbsp;&nbsp; <div _ngcontent-xda-c1="" class="float-left"><ul _ngcontent-xda-c1=""><li _ngcontent-xda-c1="" class="list-group-item list-group-item-secondary">Weather description: <br _ngcontent-xda-c1=""> clear sky <img _ngcontent-xda-c1="" alt="" src="./Weather_files/01n.png"></li><li _ngcontent-xda-c1="" class="list-group-item">Weather Assistant recommends: <br _ngcontent-xda-c1=""><em _ngcontent-xda-c1="">Clear skies, hangout!</em></li></ul></div></div></div></div></div></div></body></html></app-home></body></html></app-root>
+<script type="text/javascript" src="./Weather_files/runtime.js.download"></script><script type="text/javascript" src="./Weather_files/es2015-polyfills.js.download" nomodule=""></script><script type="text/javascript" src="./Weather_files/polyfills.js.download"></script><script type="text/javascript" src="./Weather_files/styles.js.download"></script><script type="text/javascript" src="./Weather_files/vendor.js.download"></script><script type="text/javascript" src="./Weather_files/main.js.download"></script>
+
+</body></html>

@@ -1,0 +1,557 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
+
+/***/ "./node_modules/webpack/hot sync ^\\.\\/log$":
+/*!*************************************************!*\
+  !*** (webpack)/hot sync nonrecursive ^\.\/log$ ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./log": "./node_modules/webpack/hot/log.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) { // check for number or string
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return id;
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/webpack/hot sync ^\\.\\/log$";
+
+/***/ }),
+
+/***/ "./src/$$_lazy_route_resource lazy recursive":
+/*!**********************************************************!*\
+  !*** ./src/$$_lazy_route_resource lazy namespace object ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncaught exception popping up in devtools
+	return Promise.resolve().then(function() {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
+
+/***/ }),
+
+/***/ "./src/app/app-routing.module.ts":
+/*!***************************************!*\
+  !*** ./src/app/app-routing.module.ts ***!
+  \***************************************/
+/*! exports provided: AppRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _forecast_forecast_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./forecast/forecast.component */ "./src/app/forecast/forecast.component.ts");
+
+
+
+
+
+var routes = [
+    {
+        path: '', redirectTo: '/home', pathMatch: 'full'
+    }, {
+        path: 'home', component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
+    },
+    {
+        path: 'forecast/:city', component: _forecast_forecast_component__WEBPACK_IMPORTED_MODULE_4__["ForecastComponent"]
+    },
+];
+var AppRoutingModule = /** @class */ (function () {
+    function AppRoutingModule() {
+    }
+    AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+        })
+    ], AppRoutingModule);
+    return AppRoutingModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/app.component.css":
+/*!***********************************!*\
+  !*** ./src/app/app.component.css ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".navbar-nav {\r\n    min-height: 400px;\r\n    }\r\n    \r\n.navbar-brand img {\r\n      max-height: 100%;\r\n    }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxpQkFBaUI7SUFDakI7O0FBRUo7TUFDTSxnQkFBZ0I7SUFDbEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXZiYXItbmF2IHtcclxuICAgIG1pbi1oZWlnaHQ6IDQwMHB4O1xyXG4gICAgfVxyXG4gICAgXHJcbi5uYXZiYXItYnJhbmQgaW1nIHtcclxuICAgICAgbWF4LWhlaWdodDogMTAwJTtcclxuICAgIH0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/app.component.html":
+/*!************************************!*\
+  !*** ./src/app/app.component.html ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!DOCTYPE html>\n<html>\n  <head></head>\n  <body>\n      \n    <div class=\"text-center primary\" style=\"background: #ecf0f1;\" class=\"text-center text-primary\" >\n      <p><img src=\"/assets/logo3.png\" alt=\"logo\" width=\"150\"> </p> \n      <h2>Weather Assistant</h2>\n    </div>\n \n    <router-outlet></router-outlet>\n  </body>\n</html>"
+
+/***/ }),
+
+/***/ "./src/app/app.component.ts":
+/*!**********************************!*\
+  !*** ./src/app/app.component.ts ***!
+  \**********************************/
+/*! exports provided: AppComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var AppComponent = /** @class */ (function () {
+    function AppComponent() {
+        this.title = 'weather';
+    }
+    AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-root',
+            template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
+            styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
+        })
+    ], AppComponent);
+    return AppComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/app.module.ts":
+/*!*******************************!*\
+  !*** ./src/app/app.module.ts ***!
+  \*******************************/
+/*! exports provided: AppModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _weather_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./weather.service */ "./src/app/weather.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _forecast_forecast_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./forecast/forecast.component */ "./src/app/forecast/forecast.component.ts");
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+            declarations: [
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"],
+                _forecast_forecast_component__WEBPACK_IMPORTED_MODULE_10__["ForecastComponent"]
+            ],
+            imports: [
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClientModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"]
+            ],
+            providers: [_weather_service__WEBPACK_IMPORTED_MODULE_6__["WeatherService"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/forecast/forecast.component.css":
+/*!*************************************************!*\
+  !*** ./src/app/forecast/forecast.component.css ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "body {\r\n  background-image: url('unsplash.jpg');\r\n  height: 100%;\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n.bg1 {\r\n  background-image: url(\"https://mdbootstrap.com/img/Photos/Others/img%20%2832%29.jpg\");\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n.bg2 {\r\n    background-image: url(\"https://mdbootstrap.com/img/Photos/Horizontal/City/6-col/img%20%2847%29.jpg\");\r\n    height: 100%;\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n  }\r\n  \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9yZWNhc3QvZm9yZWNhc3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFDQUFxQztFQUNyQyxZQUFZO0VBQ1osMkJBQTJCO0VBQzNCLDRCQUE0QjtFQUM1QixzQkFBc0I7QUFDeEI7QUFDQTtFQUNFLHFGQUFxRjtFQUNyRiwyQkFBMkI7RUFDM0IsNEJBQTRCO0VBQzVCLHNCQUFzQjtBQUN4QjtBQUVBO0lBQ0ksb0dBQW9HO0lBQ3BHLFlBQVk7SUFDWiwyQkFBMkI7SUFDM0IsNEJBQTRCO0lBQzVCLHNCQUFzQjtFQUN4QiIsImZpbGUiOiJzcmMvYXBwL2ZvcmVjYXN0L2ZvcmVjYXN0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJ3Vuc3BsYXNoLmpwZycpO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG59XHJcbi5iZzEge1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybChcImh0dHBzOi8vbWRib290c3RyYXAuY29tL2ltZy9QaG90b3MvT3RoZXJzL2ltZyUyMCUyODMyJTI5LmpwZ1wiKTtcclxuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG59XHJcblxyXG4uYmcyIHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcImh0dHBzOi8vbWRib290c3RyYXAuY29tL2ltZy9QaG90b3MvSG9yaXpvbnRhbC9DaXR5LzYtY29sL2ltZyUyMCUyODQ3JTI5LmpwZ1wiKTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gIH1cclxuICBcclxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/forecast/forecast.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/forecast/forecast.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!DOCTYPE html>\n<html>\n  <body>\n\n<div class=\"btn-group btn-block\">\n<a routerLink=\"/home\" class=\"btn btn-primary btn-lg\">Home</a> &nbsp; &nbsp;\n<a routerLink=\"/forecast/{{cityName}}\" class=\"btn btn-primary btn-lg\">Forecast</a>\n  </div>\n    <div class=\"container\">\n      <div class=\"info\">\n\n        <h3>{{city}} Five Days Forecast </h3>\n        <div >\n          <ul class=\"list-group list-group-flush\" >\n          <div *ngFor = 'let forecast of cityForecast' >\n          <p class=\"list-group-item list-group-item-primary list-group-item-primary\"> Date: {{forecast.dt_txt}} </p> \n          <li class=\"list-group-item\" >{{forecast.weather[0].description | uppercase}}\n          <img src=\"http://openweathermap.org/img/w/{{forecast.weather[0].icon}}.png\" alt=\"\"> </li> \n          <li class=\"list-group-item\">Minimum: {{forecast.main.temp_min}} °C</li>\n          <li class=\"list-group-item\">Maximum: {{forecast.main.temp_max}} °C</li>\n          <li class=\"list-group-item\">Humidity: {{forecast.main.humidity}} </li>\n          <li class=\"list-group-item\">Recommend: {{forecast.recommend}} </li>\n        </div>\n        </ul>\n      </div>\n    </div>\n{{recommend}}\n</div>\n\n</body>\n</html>"
+
+/***/ }),
+
+/***/ "./src/app/forecast/forecast.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/forecast/forecast.component.ts ***!
+  \************************************************/
+/*! exports provided: ForecastComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ForecastComponent", function() { return ForecastComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _weather_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../weather.service */ "./src/app/weather.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+
+var ForecastComponent = /** @class */ (function () {
+    function ForecastComponent(weatherService, route) {
+        this.weatherService = weatherService;
+        this.route = route;
+    }
+    ForecastComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.params.subscribe(function (params) {
+            console.log(params.city);
+            _this.city = params.city;
+            _this.getCityForecast(_this.city, 'metric');
+        });
+    };
+    ForecastComponent.prototype.getCityForecast = function (city, metric) {
+        var _this = this;
+        this.weatherService.getCityForecast(city, metric).subscribe(function (data) {
+            console.log('data: ', data);
+            _this.cityForecast = data;
+            // tslint:disable-next-line: prefer-for-of
+            for (var i = 0; i < _this.cityForecast.length; i++) {
+                console.log(_this.cityForecast[i].weather[0].id);
+                var code = _this.cityForecast[i].weather[0].id;
+                var recommend = _this.recommendOnWeatherCondition(code);
+                _this.cityForecast[i].recommend = recommend;
+            }
+            console.log('CityWeather:', _this.cityForecast);
+        }, function (err) {
+            console.log('error: ', err);
+        });
+    };
+    ForecastComponent.prototype.recommendOnWeatherCondition = function (weatherCode) {
+        if (weatherCode >= 200 && weatherCode <= 231) {
+            console.log('found');
+            return 'Uh-oh! Thunderstorm coming, carry an umbrella and grab a coat';
+        }
+        else if (weatherCode >= 300 && weatherCode <= 321) {
+            return 'It is gonna drizzle, grab a hoodie!';
+        }
+        else if (weatherCode >= 500 && weatherCode <= 531) {
+            return 'Rainy day buddy, carry an umbrella and dress warm';
+        }
+        else if (weatherCode >= 600 && weatherCode <= 622) {
+            return 'Do you wanna build a snowman???';
+        }
+        else if (weatherCode >= 800 && weatherCode <= 804) {
+            return 'Clear skies, hangout!';
+        }
+        else {
+            return 'Hey! carry a jacket, it is going to be pretty cloudy today';
+        }
+    };
+    ForecastComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-forecast',
+            template: __webpack_require__(/*! ./forecast.component.html */ "./src/app/forecast/forecast.component.html"),
+            styles: [__webpack_require__(/*! ./forecast.component.css */ "./src/app/forecast/forecast.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_weather_service__WEBPACK_IMPORTED_MODULE_2__["WeatherService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
+    ], ForecastComponent);
+    return ForecastComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.css":
+/*!*****************************************!*\
+  !*** ./src/app/home/home.component.css ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "body {\r\n  background-image: url(\"/unsplash2.jpg\");\r\n  height: 100%;\r\n  background-position: center;\r\n    background-size: cover;\r\n}\r\n.bg1 {\r\n  background-image: url(\"https://mdbootstrap.com/img/Photos/Others/img%20%2832%29.jpg\");\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n}\r\n.bg2 {\r\n    background-image: url(\"https://mdbootstrap.com/img/Photos/Horizontal/City/6-col/img%20%2847%29.jpg\");\r\n    height: 100%;\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n  }\r\n.bg3 {\r\n    background-image: url(\"unsplash2.jpg\");\r\n    height: 100%;\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n  }\r\n  \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx1Q0FBdUM7RUFDdkMsWUFBWTtFQUNaLDJCQUEyQjtJQUN6QixzQkFBc0I7QUFDMUI7QUFDQTtFQUNFLHFGQUFxRjtFQUNyRiwyQkFBMkI7RUFDM0IsNEJBQTRCO0VBQzVCLHNCQUFzQjtBQUN4QjtBQUVBO0lBQ0ksb0dBQW9HO0lBQ3BHLFlBQVk7SUFDWiwyQkFBMkI7SUFDM0IsNEJBQTRCO0lBQzVCLHNCQUFzQjtFQUN4QjtBQUNGO0lBQ0ksc0NBQXNDO0lBQ3RDLFlBQVk7SUFDWiwyQkFBMkI7SUFDM0IsNEJBQTRCO0lBQzVCLHNCQUFzQjtFQUN4QiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiL3Vuc3BsYXNoMi5qcGdcIik7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbn1cclxuLmJnMSB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiaHR0cHM6Ly9tZGJvb3RzdHJhcC5jb20vaW1nL1Bob3Rvcy9PdGhlcnMvaW1nJTIwJTI4MzIlMjkuanBnXCIpO1xyXG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbn1cclxuXHJcbi5iZzIge1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiaHR0cHM6Ly9tZGJvb3RzdHJhcC5jb20vaW1nL1Bob3Rvcy9Ib3Jpem9udGFsL0NpdHkvNi1jb2wvaW1nJTIwJTI4NDclMjkuanBnXCIpO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgfVxyXG4uYmczIHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcInVuc3BsYXNoMi5qcGdcIik7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICB9XHJcbiAgXHJcbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.html":
+/*!******************************************!*\
+  !*** ./src/app/home/home.component.html ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!DOCTYPE html>\n<html>\n<body>\n<div class=\"btn-group btn-block\" >\n<a routerLink=\"/home\" class=\"btn btn-primary btn-lg\">Home</a> &nbsp; &nbsp;\n<a routerLink=\"/forecast/{{cityName}}\" class=\"btn btn-primary btn-lg\">Forecast</a>\n</div>\n\n<div class=\"container\">\n  <div class=\"info\">\n    <div class=\"col-12\"> \n      <div class=\"bg-info\">\n               <h3 class=\"bg.dark text-center\">Current Weather Condition</h3>\n        <p *ngIf=\"error\" class=\"alert alert-danger\"> {{error}}</p>\n      <form class=\"form-inline my-2 my-lg-0\">\n        <input type=\"text\" [(ngModel)]=\"cityName\" name=\"city\" class=\"form-control mr-sm-2\"  placeholder=\"Search By City\" aria-label=\"Search\">\n        <button (click)=\"getCondition()\" class=\"btn btn-primary my-2 my-sm-0\"\n          type=\"submit\">Search</button>\n      </form>\n      </div>\n\n        <hr>\n    \n      <div class=\"container\" *ngIf=\"cityWeatherConditions\">\n      <div class=\"row\">\n         <!--<img src=\"/logo2.jpg\" class=\"float-left\" alt=\"\" width=\"304\" height=\"236\">--> \n      \n\n         <div class=\"col-sm-2\" class=\"float-left\" class=\"jumbotron text-center\" style=\"background-image: url(/assets/t.jpg)\">\n           <h1> {{cityWeatherConditions.name | uppercase}}</h1>\n           <span class=\"list-group-item\" class=\"display-3\">{{cityWeatherConditions.main.temp_max | number:'1.0-0'}} °C</span> \n           <span class=\"list-group-item\" class=\"display-3\"> | {{cityWeatherConditions.main.temp_max  | number:'1.0-0'}} °C</span>\n         </div>\n          <div class=\"col-sm-5\" class=\"float-left\">\n            <ul>\n             \n              <div>\n                <li class=\"list-group-item\">Country: {{cityWeatherConditions.sys.country}} \n                 <img src=\"http://openweathermap.org/images/flags/{{cityWeatherConditions.sys.country | lowercase}}.png\" alt=\"\">\n                 </li>\n             </div>\n\n               <li class=\"list-group-item\">Latitude: {{cityWeatherConditions.coord.lat}} </li>\n               <li class=\"list-group-item\">Longitude: {{cityWeatherConditions.coord.lon}} </li>\n               <li class=\"list-group-item\">Maximum: {{cityWeatherConditions.main.temp_max}} °C</li>\n               <li class=\"list-group-item\">Minimum: {{cityWeatherConditions.main.temp_min}} °C</li>\n              </ul>\n            </div> &nbsp;&nbsp;\n\n            <div class=\"col-sm-5\" class=\"float-left\">\n              <ul>\n    <li class=\"list-group-item list-group-item-secondary\" >Weather description: <br> {{cityWeatherConditions.weather[0].description}}\n        <img src=\"http://openweathermap.org/img/w/{{cityWeatherConditions.weather[0].icon}}.png\" alt=\"\"> </li>\n        <li class=\"list-group-item\">Weather Assistant recommends: <br> <em>{{recommend}}</em> </li>\n      </ul>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n</body>\n</html>\n"
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.ts":
+/*!****************************************!*\
+  !*** ./src/app/home/home.component.ts ***!
+  \****************************************/
+/*! exports provided: HomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _weather_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../weather.service */ "./src/app/weather.service.ts");
+
+
+
+var HomeComponent = /** @class */ (function () {
+    function HomeComponent(weatherService) {
+        this.weatherService = weatherService;
+        this.cityName = 'Eldoret';
+    }
+    HomeComponent.prototype.ngOnInit = function () {
+        this.getCondition();
+    };
+    HomeComponent.prototype.getCondition = function () {
+        var _this = this;
+        console.log(this.cityName);
+        this.weatherService.getCityWeather(this.cityName, 'metric').subscribe(function (data) {
+            _this.cityWeatherConditions = data;
+            console.log('CityWeather:', _this.cityWeatherConditions.weather[0].id);
+            _this.recommend = _this.recommendOnWeatherCondition(_this.cityWeatherConditions.weather[0].id);
+            console.log(_this.recommend);
+            _this.error = undefined;
+        }, function (err) {
+            _this.error = err;
+        });
+    };
+    HomeComponent.prototype.recommendOnWeatherCondition = function (weatherCode) {
+        if (weatherCode >= 200 && weatherCode <= 231) {
+            console.log('found');
+            return 'Uh-oh! Thunderstorm coming, carry an umbrella and grab a coat';
+        }
+        else if (weatherCode >= 300 && weatherCode <= 321) {
+            return 'It is gonna drizzle, grab a hoodie!';
+        }
+        else if (weatherCode >= 500 && weatherCode <= 531) {
+            return 'Rainy day buddy, carry an umbrella and dress warm';
+        }
+        else if (weatherCode >= 600 && weatherCode <= 622) {
+            return 'Do you wanna build a snowman???';
+        }
+        else if (weatherCode >= 800 && weatherCode <= 804) {
+            return 'Clear skies, hangout!';
+        }
+        else {
+            return 'Hey! carry a jacket, it is going to be pretty cloudy today';
+        }
+    };
+    HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-home',
+            template: __webpack_require__(/*! ./home.component.html */ "./src/app/home/home.component.html"),
+            styles: [__webpack_require__(/*! ./home.component.css */ "./src/app/home/home.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_weather_service__WEBPACK_IMPORTED_MODULE_2__["WeatherService"]])
+    ], HomeComponent);
+    return HomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/weather.service.ts":
+/*!************************************!*\
+  !*** ./src/app/weather.service.ts ***!
+  \************************************/
+/*! exports provided: WeatherService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WeatherService", function() { return WeatherService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
+
+
+var WeatherService = /** @class */ (function () {
+    function WeatherService(http) {
+        this.http = http;
+        this.apiKey = '43df78ac0d47e274a21911b005006b33';
+        this.apiUrl = 'https://api.openweathermap.org/data/2.5/';
+    }
+    WeatherService.prototype.getCityWeather = function (city, metric) {
+        console.log(city);
+        return this.http.get(this.apiUrl + "weather?q=" + city + "&units=" + metric + "&APPID=" + this.apiKey)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (response) { return response; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    };
+    WeatherService.prototype.getCityForecast = function (city, metric) {
+        return this.http.get(this.apiUrl + "forecast?q=" + city + "&units=" + metric + "&APPID=" + this.apiKey)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (data) {
+            var forecast = [];
+            // tslint:disable-next-line: prefer-for-of
+            for (var i = 0; i < data.list.length; i = i + 8) {
+                forecast.push(data.list[i + 7]);
+            }
+            console.log('forecast: ', forecast);
+            return forecast;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    };
+    WeatherService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])('Unknown city, try a different name');
+    };
+    WeatherService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], WeatherService);
+    return WeatherService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/environments/environment.ts":
+/*!*****************************************!*\
+  !*** ./src/environments/environment.ts ***!
+  \*****************************************/
+/*! exports provided: environment */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+// This file can be replaced during build by using the `fileReplacements` array.
+// `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
+// The list of file replacements can be found in `angular.json`.
+var environment = {
+    production: false
+};
+/*
+ * For easier debugging in development mode, you can import the following file
+ * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
+ *
+ * This import should be commented out in production mode because it will have a negative impact
+ * on performance if an error is thrown.
+ */
+// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+
+/***/ }),
+
+/***/ "./src/main.ts":
+/*!*********************!*\
+  !*** ./src/main.ts ***!
+  \*********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
+
+
+
+
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
+}
+Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
+    .catch(function (err) { return console.error(err); });
+
+
+/***/ }),
+
+/***/ 0:
+/*!************************************************************************************!*\
+  !*** multi (webpack)-dev-server/client?http://0.0.0.0:0/sockjs-node ./src/main.ts ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! C:\Users\poc\weather\node_modules\webpack-dev-server\client\index.js?http://0.0.0.0:0/sockjs-node */"./node_modules/webpack-dev-server/client/index.js?http://0.0.0.0:0/sockjs-node");
+module.exports = __webpack_require__(/*! C:\Users\poc\weather\src\main.ts */"./src/main.ts");
+
+
+/***/ })
+
+},[[0,"runtime","vendor"]]]);
+//# sourceMappingURL=main.js.map

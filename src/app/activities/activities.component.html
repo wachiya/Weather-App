@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+<div >
+<a routerLink="/home" class="btn btn-primary btn-lg">Home</a> &nbsp; &nbsp;
+<a routerLink="/forecast/{{cityName}}" class="btn btn-primary btn-lg">Forecast</a> &nbsp; &nbsp;
+<a routerLink="/moods" class="btn btn-primary btn-lg">Moods</a> &nbsp; &nbsp;
+<a routerLink="/activities" class="btn btn-primary btn-lg">Activities</a> 
+  </div>
+  <hr>
+  <div class="panel panel-success">
+    <div class="panel-heading"> </div>
+  
+  <div class="panel-body">
+      <p *ngIf="error" class="alert alert-danger"> {{error}} </p>
+    <form name="activity">
+      <div class="form-group">
+<label> Activity Type </label>
+          <div class="input-group">
+              <input type="text" [(ngModel)] = "activity.activity_type" class="form-control" name="mood_type"/>
+              <span class="input-group-btn">
+                  <button (click)="saveActivity()" type="submit" class="btn btn-success"> Save </button>
+              </span>
+            </div><!-- /input-group -->
+      </div>
+        <ul class="list-group list-group-flush">
+
+              <div class="col-sm-16">
+                  <div > 
+                          
+                    <table class="table"> 
+                      <thead class="thead-light"> 
+                        <tr> 
+                          <th scope="col">No.:</th> 
+                          <th scope="col">Date</th> 
+                          <th scope="col">Time</th> 
+                          <th scope="col">Activity</th>
+                          <th scope="col">Action</th> 
+                        </tr> 
+                      </thead> 
+                      <tbody *ngFor = 'let activity of output'> 
+                        <tr> 
+                          <th scope="row"> {{activity.id}} </th> 
+                          <td> {{activity.date}} </td> 
+                          <td> {{activity.time}} </td> 
+                          <td> {{activity.activity_type}} <input [(ngModel)]="activity.activity_type" name="activity_type" value="{{activity.activity_type}}" *ngIf="activity.edit">
+
+                          </td> 
+                          <td>
+                              <button (click)="deleteOneActivity(activity.id)" type="submit" class="btn btn-danger"> 
+                                Delete </button>
+                                &nbsp;
+                              <button (click)="toggleEdit(activity)" type="submit" class="btn btn-primary" *ngIf="!activity.edit"> 
+                                Edit </button>
+                              <button (click)="updateOneActivity(activity)" type="submit" class="btn btn-primary" *ngIf="activity.edit"> 
+                                Update </button>
+                          </td> 
+                        </tr> 
+                      </tbody> 
+                    </table> 
+                  </div>
+              </div>
+            
+          </ul>
+    </form>
+  </div>
+</div>
+</div>
+</div>
