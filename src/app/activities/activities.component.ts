@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivitiesService } from '../activities.service';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-activities',
@@ -18,7 +17,7 @@ export class ActivitiesComponent implements OnInit {
     edit: false
         };
 
-  constructor(private activitiesService: ActivitiesService, private route: ActivatedRoute) { }
+  constructor(private activitiesService: ActivitiesService) { }
 
   ngOnInit() {
     this.allActivities();
