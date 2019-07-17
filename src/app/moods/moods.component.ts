@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MoodsService } from '../moods.service';
-import { Router, ActivatedRoute, Params } from '@angular/router';
 import { throwError } from 'rxjs';
 
 @Component({
@@ -20,7 +19,7 @@ export class MoodsComponent implements OnInit {
     edit: false
         };
 
-  constructor(private moodsService: MoodsService, private route: ActivatedRoute) {}
+  constructor(private moodsService: MoodsService) {}
 
   ngOnInit() {
     this.allMoods();

@@ -1,12 +1,12 @@
-import { TestBed } from '@angular/core/testing';
+// import { TestBed } from '@angular/core/testing';
 
-import { MoodsService } from './moods.service';
+// import { MoodsService } from './moods.service';
 
-describe('MoodsService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+// describe('MoodsService', () => {
+//   beforeEach(() => TestBed.configureTestingModule({}));
 
-  it('should be created', () => {
-    const service: MoodsService = TestBed.get(MoodsService);
-    expect(service).toBeTruthy();
-  });
-});
+//   // it('should be created', () => {
+//   //   const service: MoodsService = TestBed.get(MoodsService);
+//   //   expect(service).toBeTruthy();
+//   // });
+// });

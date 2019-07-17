@@ -34,6 +34,11 @@ export class WeatherService {
         map((data: any) => {
           const forecast: any[] = [];
           // tslint:disable-next-line: prefer-for-of
+//           let count = 0;
+//           for (let item of data.list) {
+// count ++;
+
+//           }
           for (let i = 0; i < data.list.length; i = i + 8) {
             forecast.push(data.list[i + 1]);
           }
