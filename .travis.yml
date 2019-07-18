@@ -1,27 +1,28 @@
 dist: trusty
 sudo: false
- 
 language: node_js
 node_js:
-  - "10"
-  
+- '10'
 addons:
   apt:
     sources:
-      - google-chrome
+    - google-chrome
     packages:
-      - google-chrome-stable
- 
+    - google-chrome-stable
 cache:
   directories:
-     - ./node_modules
-
+  - "./node_modules"
 before_install:
-  - export TZ=Africa/Nairobi
-  - npm install -g @angular/cli
-
+- export TZ=Africa/Nairobi
+- npm install -g @angular/cli
 install:
-  - npm install
- 
+- npm install
 script:
-  - ng test --watch=false  --code-coverage=true --browsers=ChromeHeadless
+- ng test --watch=false  --code-coverage=true --browsers=ChromeHeadless
+deploy:
+  provider: firebase
+  skip-cleanup: true
+  token: $SECURE_TOKEN
+env:
+  global:
+    secure: LFKaCVIc5K2dFxW7ViVXIfrs1Aa5jr6eydNCWrR+QkhQMyHMxALnNu2H34IJEfi4Ypa16IyOuJXhJmNuz1MAj2DaKErlFH7TuMmWy+mTR2WI4l4Rf3HHPcnTQ9JTZ8QH67/bFdqLKwKG7q2usb3ixHu//s6xw4PVgpU7z1tjI2zbMpP9RHxOJMwTO/ZZoLAOOngfazyFk5h5iCIw5DcEnYtW7lkUpxoGlJb54mPpIajC+1aqRjdR5SBK/QdVv86J93mLkKFZHX92sGtUBuyyy6Q+U8psEyZ7Wobutji5MgEur7zMyPhQSZQ5fp0kGGatlPd9U42e3H1gPbC91zDxRc8W985ggTodIiUN27Hbrc5jKDcGjSjWxDsixQUIRxn8UM7QuzjU98NLqcAVMP1TBrPj7+kbSWlZdgRnGuQ/N7qlq5TlnzYQaqEumo4nfVcI6Jt0Xr29tS//A/QCjsAIiShuExcIX8o78mfHOVxMW9LGw+kOYXs9H8+AZH9RcKTt/NxX908YtYHITfEU5prDRZo9jnA0BnIg4B6U3uo2LlbAkrIgRB6LiNSTl9WX1NVjH9beAbLVOK7/wrwBxfqJVnGsP0EzA3GcyLWarp8TsJrEj3iCDeu0NNkWZZcYfYVaDtBNLIxaCqMs3NHY7wK3Mhc2rEqSdLdta1792fxpPM0=
