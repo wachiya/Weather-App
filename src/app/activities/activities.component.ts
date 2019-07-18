@@ -8,6 +8,8 @@ import { ActivitiesService } from '../activities.service';
 })
 export class ActivitiesComponent implements OnInit {
 
+  cityName = 'Eldoret';
+  error;
   title = 'Add Activity';
   output: any;
   activity: any = {

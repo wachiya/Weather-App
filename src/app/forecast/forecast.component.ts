@@ -9,6 +9,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 
 export class ForecastComponent implements OnInit {
+  cityName = 'Eldoret';
   cityForecast: any;
   city: any;
   cityWeatherConditions: any;

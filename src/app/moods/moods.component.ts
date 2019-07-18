@@ -10,6 +10,8 @@ import { throwError } from 'rxjs';
 })
 export class MoodsComponent implements OnInit {
 
+  cityName = 'Eldoret';
+  error;
   title = 'Add Mood';
   output: any[];
   mood: any = {
