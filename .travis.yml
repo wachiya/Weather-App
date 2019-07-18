@@ -15,9 +15,13 @@ addons:
 cache:
   directories:
      - ./node_modules
- 
+
+before_install:
+  - export TZ=Africa/Nairobi
+  - npm install -g @angular/cli
+
 install:
   - npm install
  
 script:
-  - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+  - ng test --watch=false  --code-coverage=true --browsers=ChromeHeadless
