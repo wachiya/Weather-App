@@ -1,65 +1,70 @@
 <div class="container">
-<div >
-<a routerLink="/home" class="btn btn-primary btn-lg">Home</a> &nbsp; &nbsp;
-<a routerLink="/forecast/{{cityName}}" class="btn btn-primary btn-lg">Forecast</a> &nbsp; &nbsp;
-<a routerLink="/moods" class="btn btn-primary btn-lg">Moods</a> &nbsp; &nbsp;
-<a routerLink="/activities" class="btn btn-primary btn-lg">Activities</a> 
-</div>
+  <div>
+    <a routerLink="/home" class="btn btn-primary btn-lg">Home</a> &nbsp; &nbsp;
+    <a routerLink="/forecast/{{cityName}}" class="btn btn-primary btn-lg">Forecast</a> &nbsp; &nbsp;
+    <a routerLink="/moods" class="btn btn-primary btn-lg">Moods</a> &nbsp; &nbsp;
+    <a routerLink="/activities" class="btn btn-primary btn-lg">Activities</a>
+  </div>
 
-<div class="container">
-  <div class="info">
-    <div class="col-12"> 
-      <div class="bg-info">
-               <h2 class="bg.dark text-center">Current Weather Condition</h2>
-        <p *ngIf="error" class="alert alert-danger"> {{error}} </p>
-      <form class="form-inline my-2 my-lg-0">
-        <input type="text" [(ngModel)]="cityName" name="city" class="form-control mr-sm-2"  placeholder="Search By City" aria-label="Search">
-        <button (click)="getCondition()" class="btn btn-primary my-2 my-sm-0"
-          type="submit">Search</button>
-      </form>
-      </div>
+  <div class="container">
+    <div class="info">
+      <div class="col-12">
+        <div class="bg-info">
+          <h2 class="bg.dark text-center">Current Weather Condition</h2>
+          <p *ngIf="error" class="alert alert-danger"> {{error}} </p>
+          <form class="form-inline my-2 my-lg-0">
+            <input type="text" [(ngModel)]="cityName" name="city" class="form-control mr-sm-2"
+              placeholder="Search By City" aria-label="Search">
+            <button (click)="getCondition()" class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
 
         <hr>
-    
-      <div class="container" *ngIf="cityWeatherConditions">
-      <div class="row">
-         <!--<img src="/logo2.jpg" class="float-left" alt="" width="304" height="236">--> 
-      
-      <div class="col-md-2 text-center" style="background-image: url(/assets/t.jpg)">
-                <h1> {{cityWeatherConditions.name | uppercase}}</h1>
-                <span class="list-group-item" class="display-1">{{cityWeatherConditions.main.temp_max | number:'1.0-0'}} °C</span>
-                <span class="list-group-item" class="display-1"> | {{cityWeatherConditions.main.temp_max  | number:'1.0-0'}} °C</span>
-              </div>
-          <div class="col-md-5" >
-            <ul>
-             
-              <div>
-                <li class="list-group-item">Country: {{cityWeatherConditions.sys.country}} 
-                 <img src="http://openweathermap.org/images/flags/{{cityWeatherConditions.sys.country | lowercase}}.png" alt="">
-                 </li>
-             </div>
 
-               <li class="list-group-item">Latitude: {{cityWeatherConditions.coord.lat}} </li>
-               <li class="list-group-item">Longitude: {{cityWeatherConditions.coord.lon}} </li>
-               <li class="list-group-item">Maximum: {{cityWeatherConditions.main.temp_max}} °C</li>
-               <li class="list-group-item">Minimum: {{cityWeatherConditions.main.temp_min}} °C</li>
+        <div class="container" *ngIf="cityWeatherConditions">
+          <div class="row">
+            <!--<img src="/logo2.jpg" class="float-left" alt="" width="304" height="236">-->
+
+            <div class="col-md-2 text-center" style="background-image: url(/assets/t.jpg)">
+              <h1> {{cityWeatherConditions.name | uppercase}}</h1>
+              <span class="list-group-item" class="display-1">{{cityWeatherConditions.main.temp_max | number:'1.0-0'}}
+                °C</span>
+              <span class="list-group-item" class="display-1"> |
+                {{cityWeatherConditions.main.temp_max  | number:'1.0-0'}} °C</span>
+            </div>
+            <div class="col-md-5">
+              <ul>
+
+                <div>
+                  <li class="list-group-item">Country: {{cityWeatherConditions.sys.country}}
+                    <img
+                      src="http://openweathermap.org/images/flags/{{cityWeatherConditions.sys.country | lowercase}}.png"
+                      alt="">
+                  </li>
+                </div>
+
+                <li class="list-group-item">Latitude: {{cityWeatherConditions.coord.lat}} </li>
+                <li class="list-group-item">Longitude: {{cityWeatherConditions.coord.lon}} </li>
+                <li class="list-group-item">Maximum: {{cityWeatherConditions.main.temp_max}} °C</li>
+                <li class="list-group-item">Minimum: {{cityWeatherConditions.main.temp_min}} °C</li>
               </ul>
             </div>
-            <div class="col-md-5" >
+            <div class="col-md-5">
               <ul>
-    <li class="list-group-item list-group-item-success" >Weather description: <br> {{cityWeatherConditions.weather[0].description}}
-        <img src="http://openweathermap.org/img/w/{{cityWeatherConditions.weather[0].icon}}.png" alt=""> </li>
-        <li class="list-group-item">Weather Assistant recommends: <br> <em>{{recommend}}</em> </li>
+                <li class="list-group-item list-group-item-success">Weather description: <br>
+                  {{cityWeatherConditions.weather[0].description}}
+                  <img src="http://openweathermap.org/img/w/{{cityWeatherConditions.weather[0].icon}}.png" alt=""> </li>
+                <li class="list-group-item">Weather Assistant recommends: <br> <em>{{recommend}}</em> </li>
 
-      </ul>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!--<div class="container" class=" text-center" >
+  <!--<div class="container" class=" text-center" >
   <br>
   <span><img src="/assets/c.png" alt="logo" width="50"> </span> &nbsp;
   <span><img src="/assets/c.png" alt="logo" width="50"> </span> &nbsp;
@@ -68,4 +73,3 @@
 </div>
 -->
 </div>
-

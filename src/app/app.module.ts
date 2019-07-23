@@ -31,7 +31,7 @@ import { ActivitiesComponent } from './activities/activities.component';
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [WeatherService, MoodsService, ActivitiesService ],
+  providers: [WeatherService, MoodsService, ActivitiesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

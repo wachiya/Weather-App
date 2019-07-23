@@ -23,12 +23,11 @@ export class HomeComponent implements OnInit {
   }
 
   getCondition() {
-    console.log(this.cityName);
     this.weatherService.getCityWeather(this.cityName, 'metric').subscribe((data) => {
       this.cityWeatherConditions = data;
-      console.log('CityWeather:', this.cityWeatherConditions.weather[0].id);
+      // console.log('CityWeather:', this.cityWeatherConditions.weather[0].id);
       this.recommend = this.recommendOnWeatherCondition(this.cityWeatherConditions.weather[0].id);
-      console.log(this.recommend);
+      // console.log(this.recommend);
       this.error = undefined;
     }, (err) => {
       this.error = err;
@@ -36,7 +35,7 @@ export class HomeComponent implements OnInit {
   }
   recommendOnWeatherCondition(weatherCode): string {
     if (weatherCode >= 200 && weatherCode <= 231) {
-      console.log('found');
+      // console.log('found');
       return 'Uh-oh! Thunderstorm coming, carry an umbrella and grab a coat';
     } else if (weatherCode >= 300 && weatherCode <= 321) {
       return 'It is gonna drizzle, grab a hoodie!';

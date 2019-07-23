@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { throwError } from 'rxjs';
-import { Observable} from 'rxjs' ;
+import { Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
@@ -17,7 +17,7 @@ export class WeatherService {
 
   }
   getCityWeather(city: string, metric: 'metric'): Observable<any> {
-    console.log(city);
+    // console.log(city);
     return this.http.get(
       `${this.apiUrl}weather?q=${city}&units=${metric}&APPID=${this.apiKey}`)
       .pipe(
@@ -34,11 +34,11 @@ export class WeatherService {
         map((data: any) => {
           const forecast: any[] = [];
           // tslint:disable-next-line: prefer-for-of
-//           let count = 0;
-//           for (let item of data.list) {
-// count ++;
+          //           let count = 0;
+          //           for (let item of data.list) {
+          // count ++;
 
-//           }
+          //           }
           for (let i = 0; i < data.list.length; i = i + 8) {
             forecast.push(data.list[i + 1]);
           }

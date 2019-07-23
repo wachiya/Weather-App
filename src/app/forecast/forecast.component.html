@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <body>
-<div class="container">
-<div >
-<a routerLink="/home" class="btn btn-primary btn-lg">Home</a> &nbsp; &nbsp;
-<a routerLink="/forecast/{{cityName}}" class="btn btn-primary btn-lg">Forecast</a>&nbsp; &nbsp;
-<a routerLink="/moods" class="btn btn-primary btn-lg">Moods</a> &nbsp; &nbsp;
-<a routerLink="/activities" class="btn btn-primary btn-lg">Activities</a> 
-  </div>
+
+<body>
+  <div class="container">
+    <div>
+      <a routerLink="/home" class="btn btn-primary btn-lg">Home</a> &nbsp; &nbsp;
+      <a routerLink="/forecast/{{cityName}}" class="btn btn-primary btn-lg">Forecast</a>&nbsp; &nbsp;
+      <a routerLink="/moods" class="btn btn-primary btn-lg">Moods</a> &nbsp; &nbsp;
+      <a routerLink="/activities" class="btn btn-primary btn-lg">Activities</a>
+    </div>
     <div class="container">
       <div class="info">
 
         <h3>{{city}} Five Days Forecast </h3>
-        <div >
-          <ul class="list-group list-group-flush" >
-          <div *ngFor = 'let forecast of cityForecast' >
-          <p class="list-group-item list-group-item-primary list-group-item-primary"> Date: {{forecast.dt_txt}} </p> 
-          <li class="list-group-item" >{{forecast.weather[0].description | uppercase}}
-          <img src="http://openweathermap.org/img/w/{{forecast.weather[0].icon}}.png" alt=""> </li> 
-          <li class="list-group-item">Minimum: {{forecast.main.temp_min}} °C</li>
-          <li class="list-group-item">Maximum: {{forecast.main.temp_max}} °C</li>
-          <li class="list-group-item">Humidity: {{forecast.main.humidity}} </li>
-          <li class="list-group-item">Recommend: {{forecast.recommend}} </li>
+        <div>
+          <ul class="list-group list-group-flush">
+            <div *ngFor='let forecast of cityForecast'>
+              <p class="list-group-item list-group-item-primary list-group-item-primary"> Date: {{forecast.dt_txt}} </p>
+              <li class="list-group-item">{{forecast.weather[0].description | uppercase}}
+                <img src="http://openweathermap.org/img/w/{{forecast.weather[0].icon}}.png" alt=""> </li>
+              <li class="list-group-item">Minimum: {{forecast.main.temp_min}} °C</li>
+              <li class="list-group-item">Maximum: {{forecast.main.temp_max}} °C</li>
+              <li class="list-group-item">Humidity: {{forecast.main.humidity}} </li>
+              <li class="list-group-item">Recommend: {{forecast.recommend}} </li>
+            </div>
+          </ul>
         </div>
-        </ul>
       </div>
+      {{recommend}}
     </div>
-{{recommend}}
-</div>
-</div>
+  </div>
 </body>
+
 </html>

@@ -1,5 +1,5 @@
 body {
-  background-image: url('unsplash.jpg');
+  background-image: url('/assets/unsplash.jpg');
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,4 +19,3 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
-  

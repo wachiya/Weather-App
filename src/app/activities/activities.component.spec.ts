@@ -13,15 +13,15 @@ describe('ActivitiesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ActivitiesComponent, MoodsComponent],
+      declarations: [ActivitiesComponent, MoodsComponent],
       imports: [HttpClientTestingModule, FormsModule,
         RouterTestingModule.withRoutes([
-            {path: 'moods', component: MoodsComponent}
+          { path: 'moods', component: MoodsComponent }
         ])
-    ],
-    providers: [ ActivitiesService ]
+      ],
+      providers: [ActivitiesService]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

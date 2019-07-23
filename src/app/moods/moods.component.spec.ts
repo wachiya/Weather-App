@@ -14,15 +14,15 @@ describe('MoodsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MoodsComponent, HomeComponent ],
-      imports: [ HttpClientTestingModule, FormsModule,
+      declarations: [MoodsComponent, HomeComponent],
+      imports: [HttpClientTestingModule, FormsModule,
         RouterTestingModule.withRoutes([
-            { path: 'home', component: HomeComponent  }
-           ])
-    ],
-      providers: [ MoodsService ]
+          { path: 'home', component: HomeComponent }
+        ])
+      ],
+      providers: [MoodsService]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
