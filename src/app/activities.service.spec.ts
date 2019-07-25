@@ -1,7 +1,7 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 
 import { ActivitiesService } from './activities.service';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('ActivitiesService', () => {
   beforeEach(() => TestBed.configureTestingModule({

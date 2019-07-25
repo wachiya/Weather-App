@@ -1,11 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { FormsModule } from '@angular/forms';
 
+import { ActivitiesService } from '../activities.service';
 import { ForecastComponent } from './forecast.component';
 import { HomeComponent } from '../home/home.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { FormsModule } from '@angular/forms';
-import { RouterTestingModule } from '@angular/router/testing';
-import { ActivitiesService } from '../activities.service';
 
 describe('ForecastComponent', () => {
   let component: ForecastComponent;

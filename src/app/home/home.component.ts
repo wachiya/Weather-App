@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { WeatherService } from '../weather.service';
 
 @Component({
@@ -33,6 +34,7 @@ export class HomeComponent implements OnInit {
       this.error = err;
     });
   }
+
   recommendOnWeatherCondition(weatherCode): string {
     if (weatherCode >= 200 && weatherCode <= 231) {
       // console.log('found');

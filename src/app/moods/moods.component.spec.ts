@@ -1,12 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MoodsComponent } from './moods.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { MoodsService } from '../moods.service';
 import { RouterTestingModule } from '@angular/router/testing';
-import { HomeComponent } from '../home/home.component';
 import { FormsModule } from '@angular/forms';
 
+import { HomeComponent } from '../home/home.component';
+import { MoodsComponent } from './moods.component';
+import { MoodsService } from '../moods.service';
 
 describe('MoodsComponent', () => {
   let component: MoodsComponent;

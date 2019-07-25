@@ -1,7 +1,7 @@
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 import { WeatherService } from '../weather.service';
-import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-forecast',
@@ -16,7 +16,6 @@ export class ForecastComponent implements OnInit {
   cityWeatherConditions: any;
   weatherCode: number;
   recommend: string;
-
 
   constructor(private weatherService: WeatherService, private route: ActivatedRoute) { }
 

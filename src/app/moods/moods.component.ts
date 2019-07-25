@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+
 import { MoodsService } from '../moods.service';
-import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-moods',

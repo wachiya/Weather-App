@@ -1,7 +1,7 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 
 import { MoodsService } from './moods.service';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('MoodsService', () => {
   beforeEach(() => TestBed.configureTestingModule({
