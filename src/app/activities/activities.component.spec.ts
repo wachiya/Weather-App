@@ -53,8 +53,8 @@ describe('ActivitiesComponent', () => {
   });
 
   it('should create', () => {
-    console.log('fixture here', fixture);
-    console.log('component here', component);
+    // console.log('fixture here', fixture);
+    // console.log('component here', component);
     expect(component).toBeTruthy();
   });
 
