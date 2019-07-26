@@ -38,11 +38,11 @@
                     </tr>
                   </thead>
                   <tbody *ngFor='let activity of output'>
-                    <tr>
+                    <tr class="activities">
                       <th scope="row"> {{activity.id}} </th>
                       <td> {{activity.date}} </td>
                       <td> {{activity.time}} </td>
-                      <td> {{activity.activity_type}} <input [(ngModel)]="activity.activity_type" name="activity_type"
+                      <td class="activity"> {{activity.activity_type}} <input [(ngModel)]="activity.activity_type" name="activity_type"
                           value="{{activity.activity_type}}" *ngIf="activity.edit">
 
                       </td>

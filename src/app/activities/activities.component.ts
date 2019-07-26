@@ -27,8 +27,10 @@ export class ActivitiesComponent implements OnInit {
   }
 
   allActivities() {
+    console.log('called');
     this.activitiesService.getAllActivities()
       .subscribe(activities => this.output = activities);
+    console.log('activities----', this.output);
 
   }
 
@@ -48,9 +50,9 @@ export class ActivitiesComponent implements OnInit {
   updateOneActivity(activity: any) {
     activity.edit = !activity.edit;
     this.activitiesService.updateActivity(activity)
-      .subscribe(updatedMood => {
-        if (updatedMood.success) {
-          activity.mood_type = updatedMood.mood.mood_type;
+      .subscribe(updatedActivity => {
+        if (updatedActivity.success) {
+          activity.activity_type = updatedActivity.activity.activity_type;
         } else {
           this.activitiesService.handleError();
         }
