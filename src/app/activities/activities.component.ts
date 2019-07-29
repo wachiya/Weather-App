@@ -27,10 +27,8 @@ export class ActivitiesComponent implements OnInit {
   }
 
   allActivities() {
-    console.log('called');
     this.activitiesService.getAllActivities()
       .subscribe(activities => this.output = activities);
-    console.log('activities----', this.output);
 
   }
 

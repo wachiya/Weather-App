@@ -53,13 +53,10 @@ describe('ActivitiesComponent', () => {
   });
 
   it('should create', () => {
-    // console.log('fixture here', fixture);
-    // console.log('component here', component);
     expect(component).toBeTruthy();
   });
 
-  xit('should have all its methods defined', () => {
-    console.log('component----', component);
+  it('should have all its methods defined', () => {
     expect(component.allActivities).toBeDefined();
     expect(component.deleteOneActivity).toBeDefined();
     expect(component.saveActivity).toBeDefined();

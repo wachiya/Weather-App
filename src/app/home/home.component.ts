@@ -26,9 +26,7 @@ export class HomeComponent implements OnInit {
   getCondition() {
     this.weatherService.getCityWeather(this.cityName, 'metric').subscribe((data) => {
       this.cityWeatherConditions = data;
-      // console.log('CityWeather:', this.cityWeatherConditions.weather[0].id);
       this.recommend = this.recommendOnWeatherCondition(this.cityWeatherConditions.weather[0].id);
-      // console.log(this.recommend);
       this.error = undefined;
     }, (err) => {
       this.error = err;
@@ -36,19 +34,31 @@ export class HomeComponent implements OnInit {
   }
 
   recommendOnWeatherCondition(weatherCode): string {
-    if (weatherCode >= 200 && weatherCode <= 231) {
-      // console.log('found');
-      return 'Uh-oh! Thunderstorm coming, carry an umbrella and grab a coat';
-    } else if (weatherCode >= 300 && weatherCode <= 321) {
-      return 'It is gonna drizzle, grab a hoodie!';
-    } else if (weatherCode >= 500 && weatherCode <= 531) {
-      return 'Rainy day buddy, carry an umbrella and dress warm';
-    } else if (weatherCode >= 600 && weatherCode <= 622) {
-      return 'Do you wanna build a snowman???';
-    } else if (weatherCode >= 800 && weatherCode <= 804) {
-      return 'Clear skies, hangout!';
-    } else {
-      return 'Hey! carry a jacket, it is going to be pretty cloudy today';
+    switch (true) {
+      case (weatherCode >= 200 && weatherCode <= 231):
+        return 'return uh- o! Thunerstorm coming, carry an umbrella';
+        break;
+
+      case (weatherCode >= 300 && weatherCode <= 321):
+        return 'It is gonna drizzle, grab a hoodie!';
+        break;
+
+      case (weatherCode >= 500 && weatherCode <= 531):
+        return 'Rainy day buddy, carry an umbrella and dress warm';
+        break;
+
+      case (weatherCode >= 600 && weatherCode <= 622):
+        return 'Do you wanna build a snowman???';
+        break;
+
+      case (weatherCode >= 800 && weatherCode <= 804):
+        return 'Clear skies, hangout!';
+        break;
+
+      default:
+        return 'Hey! carry a jacket, it is going to be pretty cloudy today';
+        break;
     }
   }
+
 }
